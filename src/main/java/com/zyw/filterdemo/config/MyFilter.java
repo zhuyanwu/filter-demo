@@ -28,8 +28,10 @@ public class MyFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
-        log.info("doFilter...");
+        log.info("doFilter before...");
         chain.doFilter(request,response);
+        log.info("doFilter after...");
+
     }
 
     @Override
